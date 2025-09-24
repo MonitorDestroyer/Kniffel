@@ -1,0 +1,3 @@
+ALIGN_LEFT: int = 0
+ALIGN_CENTER: int = 1
+ALIGN_RIGHT: int = 2
