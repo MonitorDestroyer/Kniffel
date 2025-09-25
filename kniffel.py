@@ -1,4 +1,5 @@
 from logic import game
+from logic import constants
 from output import console
 
 def main() -> None:
@@ -8,9 +9,7 @@ def main() -> None:
     current_player: int = 1
     rerolls_left: int = 2
 
-    console.print_game_state(player_one, player_two, roll, current_player, rerolls_left)
-
-
+    print(game.is_full_house([5, 5, 3, 5, 2], player_one))
 
 if(__name__ == "__main__"):
     main()
