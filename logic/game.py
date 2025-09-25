@@ -129,7 +129,7 @@ def is_small_street(roll: list[int], results: list[int]) -> int:
     return -1
 
 def is_big_street(roll: list[int], results: list[int]) -> int:
-    if(results[constants.SMALL_STREET] == -1):
+    if(results[constants.BIG_STREET] == -1):
         if(results[constants.KNIFFEL] == 50 and is_kniffel_general(roll)):
             return 50
         individual_numbers: list[int] = get_individual_numbers(roll)
@@ -147,7 +147,7 @@ def get_individual_numbers_summed(roll: list[int]) -> list[int]:
 
 
 def is_full_house(roll: list[int], results: list[int]) -> int:
-    if(results[constants.SMALL_STREET] == -1):
+    if(results[constants.FULL_HOUSE] == -1):
         if(results[constants.KNIFFEL] == 50 and is_kniffel_general(roll)):
             return 50
         individual_numbers: list[int] = get_individual_numbers_summed(roll)
@@ -163,7 +163,7 @@ def is_full_house(roll: list[int], results: list[int]) -> int:
     return -1
 
 def is_chance(roll: list[int], results: list[int]) -> int:
-    if(results[constants.SMALL_STREET] == -1):
+    if(results[constants.CHANCE] == -1):
         if(results[constants.KNIFFEL] == 50 and is_kniffel_general(roll)):
             return 50
         return sum_die(roll)
